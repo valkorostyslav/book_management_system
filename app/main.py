@@ -29,9 +29,12 @@ def custom_openapi():
     from fastapi.openapi.utils import get_openapi
 
     openapi_schema = get_openapi(
-        title="My FastAPI App",
+        title="Book Management System",
         version="1.0.0",
-        description="A FastAPI application with JWT Bearer authorization",
+        description="A feature-rich Book Management System developed using FastAPI and PostgreSQL. "
+        "This system goes beyond basic CRUD operations and includes advanced features like "
+        "bulk importing books, advanced database interactions, pagination, sorting, and JWT-based "
+        "authentication for secured access.",
         routes=app.routes,
     )
     openapi_schema["components"]["securitySchemes"] = {
