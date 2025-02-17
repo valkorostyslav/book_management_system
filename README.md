@@ -50,7 +50,11 @@ The project includes a `docker-compose.yml` file that sets up the FastAPI applic
    git clone https://github.com/your-repo/book-management-system.git
    cd book-management-system
    ```
-2. Create an `.env` file and configure the following variables:
+2. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Create an `.env` file and configure the following variables:
    ```env
    # Database configuration for main environment
     DATABASE_URL=postgresql+asyncpg://<your_user>:<your_password>@localhost:<your_port>/<your_db_name>
@@ -73,13 +77,19 @@ The project includes a `docker-compose.yml` file that sets up the FastAPI applic
     TEST_POSTGRES_USER=<your_test_user>
     TEST_POSTGRES_PASSWORD=<your_test_password>
     TEST_POSTGRES_DB=<your_test_db_name>
-
    ```
-3. Start the containers:
+4. Start the containers:
    ```bash
    docker-compose up --build
    ```
-4. Access the API documentation at:
+5. Run the server with Uvicorn:
+   ```bash
+   uvicorn app.main:app --reload
+   ```
+   - `app.main:app` refers to the FastAPI application in the `main.py` file inside the `app` directory.
+   - `--reload` enables automatic code reloading, which is useful during development.
+     
+6. Access the API documentation at:
    - OpenAPI: [http://localhost:8000/docs](http://localhost:8000/docs)
    - Redoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
