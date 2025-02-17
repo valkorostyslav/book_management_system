@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.spec
+
+# Virtual Environment
+venv/
+.env/
+.env.local
+.env.*.local
+.env
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.iml
+*.sublime-workspace
+
+# Byte-compiled / package files
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Dependencies
+Pipfile
+Pipfile.lock
+
+
+# Database
+instance/
+migrations/
+
+# Docker
+docker-compose.override.yml
+.env.docker
